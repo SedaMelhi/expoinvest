@@ -1,0 +1,33 @@
+.description
+    &__wrap
+        max-width: 714px
+        margin: 0 auto 
+    position: relative      
+    &__title
+        margin: 50px 0 24px
+        font-weight: 700
+        font-size: 8rem
+        line-height: 8.5rem
+        font-weight: 700
+        display: flex
+        justify-content: center
+        span
+            font-weight: 300
+
+@media screen and (max-width: 480px)
+    .header
+        .description
+            &__title
+                font-size: 2.6rem
+                line-height: 3.4rem
+    .description
+        &__title
+            font-size: 1.7rem
+            margin-top: 8px
+            line-height: 2.3rem
+        &__text
+            font-size: 1rem
+            line-height: 1.4rem
+        &__count
+            font-size: 1rem
+        

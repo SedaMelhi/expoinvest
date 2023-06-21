@@ -1,0 +1,82 @@
+.services
+    text-align: center
+    margin: 200px 0 0
+    &__content
+        display: flex
+        justify-content: space-between
+        margin: 70px 0 0
+        width: 100%
+        padding: 0 0 0 66px
+    &__box
+        width: 520px
+        height: 518px
+        background: #E6F2FF
+        border-radius: 24px
+        position: absolute
+        bottom: 0
+    &__left
+        margin-right: 70px
+        position: relative
+    &__img
+        width: 520px
+        flex-shrink: 0
+        filter: drop-shadow(0px 2px 10px rgba(195, 208, 222, 0.4))
+        border-radius: 12px
+        position: relative
+        img
+            width: 100%
+            display: block
+
+.sms
+    width: 279px
+    position: absolute
+    top: 0
+    z-index: 2
+    &_1
+        top: 40%
+        left: -60px
+    &_2
+        top: 45%
+        right: -60px
+    &_3
+        top: 70%
+        left: 18px
+    &_4
+        top: 82%
+        right: 11px
+.description2__wrap
+    font-size: 1.25rem
+    line-height: 1.9rem
+    width: 900px
+    margin: 0 auto
+@media screen and (max-width: 1000px) 
+    .services
+        padding: 48px 0
+        &__content
+            flex-direction: column
+            align-items: center
+        &__img
+            margin-right: 0
+        &__right
+            max-width: 750px
+            margin-top: 48px
+
+@media screen and (max-width: 480px)
+    .services
+        background-color: #fff
+        margin-top: 70px
+        padding: 0
+        &__content
+            margin-top: 48px
+        &__right
+            margin-top: 32px
+            font-size: 1.3rem
+            line-height: 2rem
+    .service
+        margin-bottom: 24px
+        &__icon
+            img
+                width: 36px
+        &__text
+            font-size: 1rem
+            line-height: 1.4rem

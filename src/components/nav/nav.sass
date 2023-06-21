@@ -1,0 +1,35 @@
+.logo
+    width: 154px
+    img
+        width: 100%
+nav
+    border-bottom: 1px solid #E6EDF0
+.nav
+    padding: 32px 0
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &__start
+        display: flex
+        align-items: center
+        img
+            display: block
+    &__end
+        display: flex
+        align-items: center
+
+@media screen and (max-width: 480px)
+    .lang__arrow
+        margin-left: 3px
+    .nav
+        &__end
+            font-size: .85rem
+    .logo
+        width: 80px
+
+@media screen and (max-width: 320px)
+    .nav
+        flex-direction: column
+        &__start
+            margin-bottom: 12px
+

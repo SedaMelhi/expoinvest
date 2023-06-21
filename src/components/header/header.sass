@@ -1,0 +1,135 @@
+.header
+    position: relative
+    text-align: center
+    padding: 70px 0 0
+    &__subtitle
+        font-weight: 500
+        font-size: 3rem
+        line-height: 4rem
+        margin-bottom: 24px
+        color: #007DFF
+    &__desc
+        width: 772px
+        font-size: 1.4rem
+        line-height: 1.7rem
+        text-align: center
+        color: #1F1F1F
+        margin: 0 auto
+    &__image
+        max-width: 858px
+        margin: 70px auto 0
+        img
+            width: 100%    
+
+.buttons
+    display: flex
+    justify-content: center
+.button
+    width: 127px
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 60px
+    border: 1px solid #007DFF
+    border-radius: 12px
+    margin: 48px 0 0
+    cursor: pointer
+    color: #007DFF
+    transition: .3s
+    &_blue
+        background: #007DFF
+        color: #FFFFFF
+        margin-right: 32px
+    &:hover
+        background: #005bbb
+
+.circle
+    &_blue
+        width: 90px
+        height: 90px
+        background-color: #F5FBFF
+        top: 4%
+        left: 15%
+    &_green
+        width: 116px
+        height: 116px
+        background-color: #F9FFF5
+        right: 10%
+        top: 15%
+    &_yellow
+        width: 70px
+        height: 70px
+        background-color:  #FFFCF5
+        left: 10%
+        top: 30%
+    z-index: -1
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    position: absolute
+    overflow: hidden
+    transform: translateY(50px)
+    opacity: 0
+        
+header.animation
+    .circle
+        @for $i from 3 to 7
+            &:nth-child(#{$i})
+                $time: $i/3
+                animation: showCircle .3s linear 1 #{$time}s forwards
+        @keyframes showCircle
+            70%
+                transform: translateY(-15px)
+            100%
+                transform: translateY(0px)
+                opacity: 1 
+        &_blue img
+            animation: showIcon .3s linear 1 1.5s forwards
+            transform: translate(-50px, 50px)
+            @keyframes showIcon   
+                100%
+                    transform: translate(0px)
+        &_brow img, &_yellow img
+            animation: showIcon .3s linear 1 1.8s forwards
+            transform: translate(0px, -50px)
+        &_green img
+            animation: showIcon .3s linear 1 1.2s forwards
+            transform: translate(-60px, 60px)
+            @keyframes showIcon   
+                100%
+                    transform: translate(0px)
+
+@media screen and (max-width: 950px) 
+    .circle
+        &_brow
+            display: none
+        &_yellow
+            display: none
+        &_blue
+            top: 34%
+            left: 12%
+        &_green
+            top: 30%
+            width: 88px
+            height: 88px
+            img
+                width: 36px
+
+@media screen and (max-width: 768px)
+    .button
+        width: 127px 
+
+@media screen and (max-width: 530px)
+    .circle
+        display: none
+
+@media screen and (max-width: 480px)
+    .header
+        &__image
+            margin: 48px auto 0
+    .button
+        width: 100%
+        height: 44px
+        max-width: 327px 
+        margin-top: 32px
