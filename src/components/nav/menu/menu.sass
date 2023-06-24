@@ -1,11 +1,15 @@
 .menu
     display: flex
     margin-left: 50px
+    @media (max-width: 1130px)
+        margin: 0 20px
     .menu__item
         margin: 0 14px
         transition: .2s linear
         &:hover
             color: #007DFF
+        @media (max-width: 1130px)
+            margin: 0 6px
 .log-in
     width: 94px
     height: 48px
@@ -17,7 +21,7 @@
     cursor: pointer
     margin-right: 28px
 
-@media screen and (max-width: 850px)
+@media screen and (max-width: 900px)
     .menu
         display: none
 

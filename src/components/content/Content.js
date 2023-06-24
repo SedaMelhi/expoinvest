@@ -1,4 +1,4 @@
-import Chat from '../chat/Chat';
+import News from '../chat/News';
 import Faq from '../faq/Faq';
 import Footer from '../footer/Footer';
 import Header from '../header/Header';
@@ -8,7 +8,7 @@ import Steps from '../steps/Steps';
 import { useTranslation } from 'react-i18next';
 
 const Content = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const menu = {
     services: t('investor'),
     deals: t('companies'),
@@ -21,7 +21,7 @@ const Content = () => {
       <Header />
       <Services />
       <Steps />
-      <Chat />
+      <News />
       <Faq />
       <Footer />
     </div>

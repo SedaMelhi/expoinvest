@@ -1,8 +1,9 @@
 import { useTranslation } from 'react-i18next';
 import './footer.sass';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
     <footer>
       <div className="wrap">
@@ -14,11 +15,16 @@ const Footer = () => {
             <a
               href="https://www.instagram.com/edenwise.io/"
               target="_blank"
+              rel="noreferrer"
               className="networks__item">
               <img src="./img/inst.svg" alt="" />
             </a>
 
-            <a href="https://t.me/eden_wise" target="_blank" className="networks__item">
+            <a
+              href="https://t.me/eden_wise"
+              rel="noreferrer"
+              target="_blank"
+              className="networks__item">
               <img src="./img/telegram.svg" alt="" />
             </a>
 
@@ -29,22 +35,22 @@ const Footer = () => {
           <div className="footer__item">
             <div className="footer__title">{t('landing')}</div>
             <div className="footer__link">
-              <a href="#">{t('services')}</a>
+              <Link to="/">{t('services')}</Link>
             </div>
             <div className="footer__link">
-              <a href="#">{t('deals')}</a>
+              <Link to="/">{t('deals')}</Link>
             </div>
             <div className="footer__link">
-              <a href="#">{t('chat')}</a>
+              <Link to="/">{t('chat')}</Link>
             </div>
           </div>
           <div className="footer__item">
             <div className="footer__title">{t('terms')}</div>
             <div className="footer__link">
-              <a href="#">{t('policy')}</a>
+              <Link to="/">{t('policy')}</Link>
             </div>
             <div className="footer__link">
-              <a href="#">{t('terms-of-use')}</a>
+              <Link to="/">{t('terms-of-use')}</Link>
             </div>
           </div>
           <div className="footer__item">
@@ -53,7 +59,7 @@ const Footer = () => {
               <a href="mailto:info@expovision.io">info@expovision.io</a>
             </div>
             <div className="footer__link">
-              <a href="tel:+17479447347">+1 747 944 7347</a>
+              <a href="tel:+17479447347">+7 (929) 4444 095</a>
             </div>
           </div>
         </div>

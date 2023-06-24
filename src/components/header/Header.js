@@ -5,7 +5,7 @@ import Description from '../description/Description';
 import './header.sass';
 
 const Header = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [imgState, setImgState] = useState(false);
   return (
     <header className={imgState ? 'animation' : ''} alt="" onLoad={() => setImgState(true)}>
